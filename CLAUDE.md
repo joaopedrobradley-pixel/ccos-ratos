@@ -1,14 +1,49 @@
-# Claude Code OS — Kit Ratos de IA
+# Conectaria — Claude Code OS
 
-Este repositório é o kit de boas-vindas do curso Claude Code OS.
+## O que é esse workspace
+Workspace principal da Conectaria, empresa de Mentoria de Carreira. Aqui concentramos o trabalho de marketing e conteúdo do LinkedIn, materiais personalizados para clientes e organização da operação.
 
-Se você acabou de clonar esse repositório:
-1. Rode `/setup` pra configurar o sistema pro seu negócio (uns 5 minutos)
-2. Depois rode `/mapear` pra criar skills personalizadas pro que você faz no dia a dia
+**Estrutura de pastas:**
+- `marketing/referencias/` — referências de conteúdo, benchmarks e inspirações
+- `marketing/linkedin/` — pautas, rascunhos e conteúdos do LinkedIn (canal principal)
+- `marketing/instagram/` — conteúdos e criativos para Instagram
+- `marketing/tiktok/` — roteiros e conteúdos para TikTok
+- `marketing/youtube/` — roteiros e conteúdos para YouTube
+- `marketing/email-marketing/` — campanhas e templates Brevo
+- `marketing/whatsapp/` — mensagens e fluxos de WhatsApp
+- `comercial/organizacao/` — organização do processo comercial
+- `clientes/organizacao/` — organização de clientes e entregas
+- `operacional/` — processos internos e documentação
+- `dados/` — arquivos para análise (transcrições Tactiq, planilhas, CSVs)
+- `templates/skills/` — templates de skills prontos para personalizar com /mapear
+- `templates/ferramentas/catalogo.md` — APIs e ferramentas disponíveis para usar em skills
+
+## Sobre o negócio
+A Conectaria ajuda profissionais experientes — especialmente de vendas, marketing e tecnologia — a conquistarem novas oportunidades mostrando seus pontos fortes e resultados para o mercado. Entregamos currículo, perfil LinkedIn e documentos Gupy personalizados por cliente, além de preparação para entrevistas.
+
+## O que mais fazemos aqui
+- Criação de conteúdo estratégico para o LinkedIn (canal principal e prioritário)
+- Agentes personalizados para clientes com o conhecimento da Conectaria sobre carreira
+- Estruturação de currículo, LinkedIn e Gupy para cada cliente individualmente
+- Suporte à equipe comercial: organização de ligações e análise de métricas
+- Email marketing via Brevo
+
+## Equipe e papéis
+- **João Pedro Bradley** (sócio) — marketing, conteúdo e gestão da operação
+- **Closer** — vendas ativas
+- **SDR** — prospecção
+- **Estagiária de Projetos** — entrega e atendimento aos clientes
+
+## Ferramentas conectadas
+- Google Drive — arquivos da empresa
+- ClickUp — organização e CRM
+- Brevo — email marketing
+- Tactiq — transcrição de reuniões
+- SmartVídeo — plataforma de aulas
+- AlpaClass — base de conteúdo e membros
+- Speedy — emissão de notas fiscais (automatizado)
 
 ---
-
-<!-- Este arquivo será atualizado pelo /setup com o contexto do seu negócio. -->
 
 ## Contexto do negócio
 
@@ -76,7 +111,7 @@ Se sim, identificar o que precisa atualizar:
 Mostrar o que vai mudar antes de salvar. Não reformatar o arquivo inteiro, só adicionar ou editar a linha relevante.
 
 **Quando NÃO perguntar:**
-- Tarefas pontuais que não mudam o contexto (ex: escrever um email, criar um post avulso)
+- Tarefas pontuais que não mudam o contexto (ex: escrever um post, criar um email avulso)
 - Perguntas simples ou conversas sem ação
 - Mudanças que já foram salvas pelo bloco "Aprender com correções"
 
