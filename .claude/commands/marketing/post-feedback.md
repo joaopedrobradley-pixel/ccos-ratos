@@ -79,3 +79,46 @@ O post precisa fazer a pessoa pensar: **"Essa é exatamente a minha situação �
 Só após receber as respostas, escreva o post completo seguindo rigorosamente a estrutura AIDA acima.
 
 Escreva um post que faça o leitor pensar: "Isso poderia ser eu."
+
+---
+
+## Exemplo de post validado
+
+Use como referência de tom, estrutura e ritmo:
+
+```
+Em APENAS 14 dias, ela Virou a Chave e CONQUISTOU o Emprego dos Sonhos
+
+Sabe aquela Sensação de não saber se seu Perfil do LinkedIn está atraindo as pessoas certas? 🫤
+
+Foi exatamente assim que a Jessica Rodrigues se sentia antes de começar a Mentoria do meu Método Perfil Glorioso.
+
+Ela tinha experiência, era qualificada, mas algo parecia não encaixar. Seu perfil estava ali, parado, como mais um no meio de milhares...
+
+Mas tudo mudou quando ela decidiu dar uma chance ao processo 💡
+
+Em 14 dias, com Foco, Estratégia e as Ferramentas certas, ela:
+✅ Transformou o seu Perfil em uma Verdadeira Máquina de Atração de Recrutadores.
+✅ Recebeu Abordagens de Empresas que nem sabia que estavam de olho no Mercado.
+✅ Conquistou o Emprego que Sempre Sonhou (e merecia!).
+
+Mágica? não!
+
+Foi método!
+Foi acreditar que com pequenos ajustes e direcionamento, ela poderia ser vista pelo que realmente é: uma profissional incrível e cheia de potencial.
+
+O meu Método Perfil Glorioso é o ÚNICO que:
+➡️ Combina Estratégias de Marketing, Análise de Dados e Growth para te ensinar a se Vender no Digital como o Profissional Talentoso que você é
+➡️ Conquistar Recolocações ou novas Oportunidades de forma Estratégica e Eficiente.
+
+Agora é a sua vez!
+
+Se você quer Transformar o seu Perfil no LinkedIn em uma MÁQUINA de Oportunidades e finalmente Conquistar seu Emprego
+
+Clica no link e vem comigo na próxima turma da mentoria Perfil Glorioso:
+https://lnkd.in/dzwGtqWQ
+
+🔥 As vagas são limitadas, hein!?
+
+Não espere mais. O seu Sonho pode estar a Apenas 14 dias de distância!
+```
