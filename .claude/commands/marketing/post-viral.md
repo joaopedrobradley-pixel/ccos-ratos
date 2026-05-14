@@ -90,6 +90,13 @@ Crie um post que:
 - O título deve ser impactante — pode ser em maiúsculas
 - Hashtags ao final: #vagas #oportunidades #mercado #trabalho
 
+## Anti-padrões de IA — proibido em qualquer post
+
+**Sequência de três ou mais "Não X. Faça Y.":** no máximo um contraste por post.
+**Tripla de frases nominais no fechamento:** encerrar em prosa, não em fragmentos descendentes como "Mesma pessoa. Mesma experiência. Descrição diferente."
+**Frase de assinatura final:** evitar bordões de duas frases como encerramento dramático ("É filtro. E o filtro decide quem aparece e quem fica invisível.")
+**Título que entrega a conclusão:** o título cria lacuna de curiosidade, não entrega a resposta antes do post construir a tensão.
+
 ---
 
 ## Entrega final

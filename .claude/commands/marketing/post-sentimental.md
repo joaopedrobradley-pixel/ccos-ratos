@@ -47,7 +47,9 @@ Os posts mais virais dizem o que as pessoas sentem mas nunca verbalizam. O leito
 - "Anos entregando resultado. Zero promoção. Zero aumento. E a empresa achava que você ia ficar para sempre."
 
 **7. Fechamento poético**
-Os últimos 2-4 parágrafos são quase poesia. Frases curtas, simétricas, que funcionam como citação isolada. É aqui que o post vira compartilhamento.
+Os últimos 2-4 parágrafos encerram com uma verdade que o leitor não esperava. Frases que funcionam como citação isolada. É aqui que o post vira compartilhamento.
+
+Cuidado: "poético" não significa simétrico. Pares paralelos do tipo "X sem Y é [substantivo]. Y sem X é [substantivo]." soam como IA tentando soar profundo. Um fechamento humano chega a uma ideia — não constrói uma equação.
 
 **8. Generalização da história individual**
 Depois do twist, o post sai do personagem e fala com o leitor diretamente — transforma a história de "Carlos" numa verdade universal que qualquer um pode reconhecer na própria vida.
@@ -101,6 +103,7 @@ FECHAMENTO POÉTICO
 - Sem travessão (—) em nenhum contexto
 - Sem reticências (...) no meio de frases
 - Sem construções do tipo "Não é sobre X, é sobre Y" em linhas separadas
+- Sem pares de aforismos simétricos: "X sem Y é [noun]. Y sem X é [noun]." — é o padrão de IA tentando soar filosófico. Escrever a ideia em prosa, não como equação
 - Linguagem próxima, conversacional, sem clichês motivacionais
 
 ---
@@ -129,6 +132,7 @@ Depois de escrever, verifique mentalmente:
 - O fechamento tem pelo menos uma frase que funcionaria como citação isolada?
 - Não tem CTA, lista, hashtag ou emoji excessivo?
 - Soa como escrito por um humano ou parece IA?
+- O fechamento tem algum par simétrico ("X sem Y é... Y sem X é...")? Se sim, reescrever em prosa.
 
 Se algum ponto falhar, reescreva antes de entregar.
 

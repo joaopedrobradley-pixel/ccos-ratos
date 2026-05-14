@@ -57,6 +57,27 @@ O post precisa fazer a pessoa pensar: **"Caramba, é exatamente assim que eu me 
 - Nunca usar "responsável por", "proativo", "comunicativo" — linguagem de impacto
 - Sempre terminar com CTA claro e fácil de executar
 
+## Anti-padrões de IA — proibido em qualquer post
+
+Esses padrões foram identificados em posts reais que não tiveram engajamento. O leitor sente inconscientemente e se desconecta.
+
+**Título que entrega a conclusão:**
+O título levanta a tensão ou o problema. A informação central é a recompensa, não o gancho.
+
+**Sequência de três ou mais "Não X. Faça Y.":**
+No máximo um contraste por post. Sequências de três ou mais são o padrão de IA mais reconhecível em posts educativos.
+
+**Tripla de frases nominais como fechamento:**
+- Errado: "Mesma pessoa. Mesma experiência. Descrição diferente."
+- Certo: encerrar em prosa real, sem fragmentar em três peças descendentes
+
+**Frase de assinatura final:**
+- Errado: "É filtro. E o filtro decide quem aparece e quem fica invisível."
+- Certo: uma ideia completa, não um bordão de duas frases
+
+**Estrutura ❌/✅ sem tensão:**
+Lista de erros seguida de lista de acertos sinaliza o final do post antes do leitor chegar lá. Use a lista para entregar valor prático, não para criar um comparativo mecânico que o leitor já antecipa.
+
 ## Como proceder
 
 **Antes de escrever qualquer coisa, faça DUAS perguntas:**

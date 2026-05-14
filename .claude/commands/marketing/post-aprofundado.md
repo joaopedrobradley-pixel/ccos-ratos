@@ -61,6 +61,33 @@ O post precisa fazer a pessoa pensar: **"Caramba, é exatamente assim que eu me 
 - Nunca termine sem CTA claro
 - Parágrafos de conexão são tão importantes quanto o conteúdo — não pule
 
+## Anti-padrões de IA — proibido em qualquer post
+
+Esses padrões foram identificados em posts reais que não tiveram engajamento. O leitor sente inconscientemente e se desconecta.
+
+**Título que entrega a conclusão:**
+O título cria lacuna de curiosidade. A informação central é a recompensa, não o gancho. Se o leitor já sabe para onde o post vai no título, não tem razão de continuar lendo.
+- Errado: "O SEU CURRÍCULO ESTÁ SENDO LIDO POR UMA IA ANTES DE QUALQUER RECRUTADOR VER ELE"
+- Errado: "Coloque números nas suas experiências."
+- Certo: o título levanta o problema ou a tensão — a solução vem no corpo
+
+**Sequência de três ou mais "Não X. Faça Y.":**
+É o padrão de IA mais reconhecível em posts educativos. No máximo um contraste por post.
+- Errado: "Não liste tarefas. Liste o que mudou. / Não escreva 'responsável por'. Escreva o que aconteceu. / Não espere a entrevista. Coloque antes."
+- Certo: integrar o contraste em prosa, ou fazer um único "não X, faça Y" bem desenvolvido
+
+**Tripla de frases nominais como fechamento:**
+- Errado: "Mesma pessoa. Mesma experiência. Descrição diferente."
+- Certo: escrever a conclusão em prosa real, sem partir em três fragmentos descendentes
+
+**Frase de assinatura final:**
+- Errado: "É filtro. E o filtro decide quem aparece e quem fica invisível."
+- Errado: "E prova tem número." (como encerramento isolado)
+- Certo: encerrar com uma ideia completa, não com efeito dramático de bordão
+
+**Sem tensão antes da entrega:**
+O post deve cultivar desconforto antes de entregar o alívio. Estruturas previsíveis (lista de ❌ seguida de ✅) sinalizam o fim do post antes do leitor chegar lá. Não há tensão — é um relatório disfarçado.
+
 ## Como proceder
 
 **Antes de escrever qualquer coisa, faça DUAS perguntas:**
