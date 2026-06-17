@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    width: 1080px;
+    height: 1350px;
+    background: #ffffff;
+    font-family: 'Inter', sans-serif;
+    display: flex;
+    flex-direction: column;
+    padding: 80px 72px 64px;
+    position: relative;
+    overflow: hidden;
+  }
+
+  /* Barra azul lateral esquerda */
+  body::before {
+    content: '';
+    position: absolute;
+    left: 0; top: 0; bottom: 0;
+    width: 8px;
+    background: linear-gradient(180deg, #1B9ED4 0%, #1565A8 100%);
+  }
+
+  .titulo {
+    font-size: 64px;
+    font-weight: 800;
+    color: #0D1B2A;
+    line-height: 1.15;
+    margin-bottom: 52px;
+    max-width: 880px;
+  }
+
+  .titulo .destaque {
+    background: #D6EEFA;
+    color: #1565A8;
+    padding: 4px 12px;
+    border-radius: 6px;
+    display: inline;
+  }
+
+  .divisor {
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(90deg, #1B9ED4, #D6EEFA);
+    margin-bottom: 48px;
+    border-radius: 2px;
+  }
+
+  .colunas {
+    display: grid;
+    grid-template-columns: 1fr 2px 1fr;
+    gap: 0 40px;
+    flex: 1;
+  }
+
+  .separador-vertical {
+    background: linear-gradient(180deg, #1B9ED4, #D6EEFA 80%);
+    border-radius: 2px;
+  }
+
+  .coluna {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .pergunta {
+    font-size: 28px;
+    font-weight: 400;
+    color: #0D1B2A;
+    line-height: 1.4;
+  }
+
+  .pergunta .num {
+    font-weight: 700;
+    color: #1B9ED4;
+  }
+
+  .logo-area {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin-top: 40px;
+    padding-top: 28px;
+    border-top: 1px solid #D6EEFA;
+  }
+
+  .logo-icon {
+    width: 64px;
+    height: 64px;
+  }
+
+  .logo-texto {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .logo-nome {
+    font-size: 28px;
+    font-weight: 800;
+    color: #1B9ED4;
+    letter-spacing: -0.3px;
+  }
+
+  .logo-cargo {
+    font-size: 22px;
+    font-weight: 400;
+    color: #4DC3EF;
+  }
+</style>
+</head>
+<body>
+
+  <h1 class="titulo">
+    14 perguntas que vão acontecer na sua próxima
+    <span class="destaque">entrevista de emprego</span>
+  </h1>
+
+  <div class="divisor"></div>
+
+  <div class="colunas">
+    <div class="coluna">
+      <p class="pergunta"><span class="num">1–</span> Fale um pouco sobre você.</p>
+      <p class="pergunta"><span class="num">2–</span> Conte a sua trajetória profissional.</p>
+      <p class="pergunta"><span class="num">3–</span> Por que você saiu do último emprego?</p>
+      <p class="pergunta"><span class="num">4–</span> Por que você quer sair do seu emprego atual?</p>
+      <p class="pergunta"><span class="num">5–</span> Quais são seus pontos fortes?</p>
+      <p class="pergunta"><span class="num">6–</span> Quais são seus pontos fracos?</p>
+      <p class="pergunta"><span class="num">7–</span> Por que você quer trabalhar nessa empresa?</p>
+    </div>
+
+    <div class="separador-vertical"></div>
+
+    <div class="coluna">
+      <p class="pergunta"><span class="num">8–</span> Qual foi seu principal desafio na empresa anterior?</p>
+      <p class="pergunta"><span class="num">9–</span> Como você se vê daqui a 5 anos?</p>
+      <p class="pergunta"><span class="num">10–</span> Conte um erro que você cometeu.</p>
+      <p class="pergunta"><span class="num">11–</span> Fale de uma conquista da sua trajetória profissional.</p>
+      <p class="pergunta"><span class="num">12–</span> Conte um elogio que recebeu de uma pessoa da sua equipe.</p>
+      <p class="pergunta"><span class="num">13–</span> Qual estilo de liderança que você mais gosta de trabalhar?</p>
+      <p class="pergunta"><span class="num">14–</span> Por que eu deveria te contratar?</p>
+    </div>
+  </div>
+
+  <div class="logo-area">
+    <svg class="logo-icon" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+      <!-- Pessoa centralizada -->
+      <circle cx="50" cy="34" r="14" fill="#1B9ED4"/>
+      <ellipse cx="50" cy="72" rx="20" ry="14" fill="#1B9ED4"/>
+      <!-- Rede ao redor -->
+      <g fill="none" stroke="#4DC3EF" stroke-width="2.5">
+        <!-- Triângulos/segmentos da rede -->
+        <polygon points="50,8 58,20 42,20" fill="#4DC3EF" opacity="0.8"/>
+        <polygon points="74,18 78,32 66,28" fill="#4DC3EF" opacity="0.7"/>
+        <polygon points="84,44 82,58 72,50" fill="#4DC3EF" opacity="0.6"/>
+        <polygon points="26,18 22,32 34,28" fill="#4DC3EF" opacity="0.7"/>
+        <polygon points="16,44 18,58 28,50" fill="#4DC3EF" opacity="0.6"/>
+        <polygon points="34,82 28,68 42,72" fill="#4DC3EF" opacity="0.7"/>
+        <polygon points="66,82 72,68 58,72" fill="#4DC3EF" opacity="0.7"/>
+        <polygon points="50,94 42,82 58,82" fill="#4DC3EF" opacity="0.8"/>
+      </g>
+    </svg>
+    <div class="logo-texto">
+      <span class="logo-nome">João Pedro Bradley</span>
+      <span class="logo-cargo">Mentor de Carreira</span>
+    </div>
+  </div>
+
+</body>
+</html>

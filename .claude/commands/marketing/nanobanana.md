@@ -58,11 +58,11 @@ Escrever um prompt descritivo em ingles. Ser especifico sobre:
 
 ### 3. Definir onde salvar
 
-As imagens ficam em `F:\Claude\Conectaria\Imagens para conteúdo\` organizadas por canal:
-- **Instagram:** `Imagens para conteúdo\Instagram\[subpasta-do-tema]\`
-- **LinkedIn:** `Imagens para conteúdo\LinkedIn\[subpasta-do-tema]\`
-- **Carrossel:** `Imagens para conteúdo\Instagram\[tema-do-carrossel]\`
-- **Teste / sem canal definido:** `Imagens para conteúdo\Teste\`
+As imagens ficam em `F:\Claude\Conectaria\marketing\Imagens para conteúdo\` organizadas por canal:
+- **Instagram:** `marketing\Imagens para conteúdo\Instagram\[subpasta-do-tema]\`
+- **LinkedIn:** `marketing\Imagens para conteúdo\LinkedIn\[subpasta-do-tema]\`
+- **Carrossel:** `marketing\Imagens para conteúdo\Instagram\[tema-do-carrossel]\`
+- **Teste / sem canal definido:** `marketing\Imagens para conteúdo\Teste\`
 
 Criar a subpasta do tema antes de salvar se ela não existir.
 
