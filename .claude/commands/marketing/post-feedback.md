@@ -80,14 +80,38 @@ O post precisa fazer a pessoa pensar: **"Essa é exatamente a minha situação �
 **9. CTA conectada à narrativa**
 - Formato: "Se hoje você [desejo concreto do leitor], esse caminho pode ser mais rápido do que você imagina."
 - Seguido de: "Quer ter o mesmo resultado do [nome]? Fale com a gente agora mesmo: [LINK]"
-- **Link padrão:** https://api.whatsapp.com/send?phone=558193914560&text=Ol%C3%A1,%20vim%20pelo%20LinkedIn%20e%20gostaria%20da%20ajuda%20do%20Jo%C3%A3o%20Pedro%20Bradley
+- **Link padrão:** https://conectaria.com.br/fale-com-o-nosso-time-linkedin/
 
 ## Regras obrigatórias
 - Nunca inventar resultados — use os dados reais que o usuário fornecer
 - A história é sempre do mentorado, não autopropaganda do mentor
 - Tom de prova social, não de venda direta
-- Sempre terminar com CTA para a mentoria + link
+- Sempre terminar com CTA para a mentoria + link padrão: https://conectaria.com.br/fale-com-o-nosso-time-linkedin/
 - Curto o suficiente para ser lido em 30 segundos, mas completo o suficiente para convencer
+
+## Formatação obrigatória — espaçamento LinkedIn
+Cada bloco de texto deve ser separado por uma linha em branco. O LinkedIn colapsa espaços simples — sem a linha em branco extra, o texto fica colado e difícil de ler.
+
+Regra: entre todo parágrafo, entre cada ✅ da lista de resultados, entre a virada filosófica e o parágrafo seguinte, e antes do CTA — sempre uma linha em branco separando.
+
+Exemplo de estrutura correta:
+Parágrafo A.
+
+Parágrafo B.
+
+Resultado:
+
+✅ item 1
+
+✅ item 2
+
+Virada linha 1.
+
+Virada linha 2.
+
+Parágrafo de generalização.
+
+CTA + link
 
 ## Como proceder
 
