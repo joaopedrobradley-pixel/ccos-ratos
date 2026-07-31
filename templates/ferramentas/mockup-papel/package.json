@@ -1,0 +1,11 @@
+{
+  "name": "mockup-papel",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "gerar": "node gerar-mockup.mjs"
+  },
+  "dependencies": {
+    "playwright": "^1.62.1"
+  }
+}

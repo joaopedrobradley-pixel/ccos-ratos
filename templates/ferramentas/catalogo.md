@@ -24,6 +24,12 @@ npx playwright screenshot --viewport-size=1080,1350 --full-page "file:///caminho
 - Slide 16:9: 1920x1080
 - Card quadrado: 1080x1080
 
+### Mockup de papel (canto dobrado)
+**O que faz:** Gera um PNG com fundo transparente de qualquer imagem/print dentro de um mockup de "folha de papel" (sombra, leve inclinação, canto dobrado tipo dog-ear) pra compor em posts, anúncios e materiais
+**Precisa de conta:** Nao, roda local (Playwright)
+**Onde esta:** `templates/ferramentas/mockup-papel/` (HTML + script `gerar-mockup.mjs`, README com instrucoes)
+**Quando usar:** Sempre que precisar dar aparencia de "documento real" pra um print de curriculo, template ou tela em um criativo
+
 ### Remotion
 **O que faz:** Gera videos programaticamente a partir de componentes React (animacoes, criativos de ads, intros)
 **Precisa de conta:** Nao, roda local

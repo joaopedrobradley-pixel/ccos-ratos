@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8" />
+<title>Mockup de papel</title>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html, body { background: transparent; }
+
+  /*
+    COMO USAR
+    1. Troque o src da imagem abaixo (#paper img) pela sua imagem (print do currículo, template, etc).
+    2. Ajuste --rotate e --fold se quiser mais ou menos inclinação / dobra.
+    3. Gere o PNG com fundo transparente rodando gerar-mockup.mjs (na mesma pasta).
+  */
+
+  #stage {
+    display: inline-block;
+    padding: 90px;
+  }
+
+  #paper-wrap {
+    --rotate: -3deg;
+    --fold: 58px;
+    position: relative;
+    width: 640px;
+    transform: rotate(var(--rotate));
+    filter: drop-shadow(0 26px 34px rgba(20, 20, 20, 0.30))
+            drop-shadow(0 6px 10px rgba(20, 20, 20, 0.14));
+  }
+
+  #paper {
+    position: relative;
+    width: 100%;
+    background: #fdfdfc;
+    clip-path: polygon(
+      0 0,
+      100% 0,
+      100% calc(100% - var(--fold)),
+      calc(100% - var(--fold)) 100%,
+      0 100%
+    );
+    overflow: hidden;
+    line-height: 0;
+  }
+
+  #paper img {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+
+  /* linha de sombra da vinco, nítida, projetada sobre a própria página */
+  #crease-shadow {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: calc(var(--fold) * 2.1);
+    height: calc(var(--fold) * 2.1);
+    background: linear-gradient(
+      135deg,
+      transparent 38%,
+      rgba(0, 0, 0, 0.20) 58%,
+      rgba(0, 0, 0, 0.06) 66%,
+      transparent 78%
+    );
+    pointer-events: none;
+  }
+
+  /* a "orelha" dobrada: escura junto ao vinco, clara na ponta (pega luz) */
+  #fold {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: var(--fold);
+    height: var(--fold);
+    clip-path: polygon(100% 0, 100% 100%, 0 100%);
+    background: linear-gradient(
+      135deg,
+      #cecdc8 0%,
+      #eeece8 55%,
+      #ffffff 100%
+    );
+    filter: drop-shadow(-2px -1px 3px rgba(0, 0, 0, 0.25));
+  }
+
+  #fold::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    clip-path: polygon(100% 0, 100% 100%, 0 100%);
+    box-shadow: inset 2px 2px 4px rgba(0, 0, 0, 0.12);
+  }
+</style>
+</head>
+<body>
+
+  <div id="stage">
+    <div id="paper-wrap">
+      <div id="paper">
+        <img src="COLOQUE-SUA-IMAGEM-AQUI.png" alt="documento" />
+        <div id="crease-shadow"></div>
+      </div>
+      <div id="fold"></div>
+    </div>
+  </div>
+
+</body>
+</html>
