@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    width: 1080px;
+    height: 1350px;
+    background: #ffffff;
+    font-family: 'Inter', sans-serif;
+    display: flex;
+    flex-direction: column;
+    padding: 90px 90px 70px;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .titulo {
+    font-size: 58px;
+    font-weight: 900;
+    color: #0D1B2A;
+    line-height: 1.25;
+    margin-bottom: 16px;
+    letter-spacing: -1px;
+  }
+
+  .titulo .destaque {
+    text-decoration: underline;
+    text-decoration-color: #1B9ED4;
+    text-decoration-thickness: 6px;
+    text-underline-offset: 8px;
+  }
+
+  .linha-topo {
+    width: 100%;
+    height: 4px;
+    background: #0D1B2A;
+    margin-bottom: 64px;
+  }
+
+  .lista {
+    display: flex;
+    flex-direction: column;
+    gap: 44px;
+    flex: 1;
+  }
+
+  .item {
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+    font-size: 40px;
+    font-weight: 600;
+    color: #0D1B2A;
+    line-height: 1.35;
+  }
+
+  .item .seta {
+    color: #1B9ED4;
+    font-weight: 900;
+    flex-shrink: 0;
+  }
+
+  .item .check {
+    flex-shrink: 0;
+    margin-left: auto;
+    padding-left: 20px;
+  }
+
+  .aviso {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    background: #EAF6FC;
+    border-radius: 14px;
+    padding: 28px 32px;
+    margin: 40px 0 44px;
+  }
+
+  .aviso p {
+    font-size: 28px;
+    font-weight: 700;
+    color: #1565A8;
+  }
+
+  .logo-area {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 18px;
+  }
+
+  .logo-texto {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+  }
+
+  .logo-nome {
+    font-size: 28px;
+    font-weight: 800;
+    color: #1B9ED4;
+    letter-spacing: -0.3px;
+  }
+
+  .logo-cargo {
+    font-size: 22px;
+    font-weight: 400;
+    color: #4DC3EF;
+  }
+
+  .logo-icon { width: 64px; height: 64px; }
+</style>
+</head>
+<body>
+
+  <h1 class="titulo">O processo que uso pra<br>colocar cliente em <span class="destaque">vaga<br>remota que paga em dólar</span></h1>
+
+  <div class="linha-topo"></div>
+
+  <div class="lista">
+    <div class="item">
+      <span class="seta">&gt;</span>
+      <span>Defino a área certa pro perfil dela (CS, Marketing, Dados ou Atendimento)</span>
+      <svg class="check" width="44" height="44" viewBox="0 0 24 24"><circle cx="12" cy="12" r="12" fill="#1B9ED4"/><path d="M7 12.5l3 3 7-7" stroke="#fff" stroke-width="2.2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    </div>
+    <div class="item">
+      <span class="seta">&gt;</span>
+      <span>Busco vaga nos 3 sites certos, não nos óbvios</span>
+      <svg class="check" width="44" height="44" viewBox="0 0 24 24"><circle cx="12" cy="12" r="12" fill="#1B9ED4"/><path d="M7 12.5l3 3 7-7" stroke="#fff" stroke-width="2.2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    </div>
+    <div class="item">
+      <span class="seta">&gt;</span>
+      <span>Currículo em modelo internacional, com nosso método VRD</span>
+      <svg class="check" width="44" height="44" viewBox="0 0 24 24"><circle cx="12" cy="12" r="12" fill="#1B9ED4"/><path d="M7 12.5l3 3 7-7" stroke="#fff" stroke-width="2.2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    </div>
+    <div class="item">
+      <span class="seta">&gt;</span>
+      <span>LinkedIn inteiro alinhado ao objetivo, não só o currículo</span>
+      <svg class="check" width="44" height="44" viewBox="0 0 24 24"><circle cx="12" cy="12" r="12" fill="#1B9ED4"/><path d="M7 12.5l3 3 7-7" stroke="#fff" stroke-width="2.2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    </div>
+  </div>
+
+  <div class="aviso">
+    <p>📄 Leia a legenda pra entender o processo completo</p>
+  </div>
+
+  <div class="logo-area">
+    <img src="file:///F:/Claude/Conectaria/marca/logo.png" alt="João Pedro Bradley — Mentor de Carreira" style="height: 64px;">
+  </div>
+
+</body>
+</html>

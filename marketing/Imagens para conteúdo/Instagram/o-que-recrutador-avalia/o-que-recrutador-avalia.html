@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    width: 1080px;
+    height: 1920px;
+    background: #ffffff;
+    font-family: 'Inter', sans-serif;
+    display: flex;
+    flex-direction: column;
+    padding: 0 72px 72px;
+    position: relative;
+    overflow: hidden;
+  }
+
+  /* Barra top — simula app de notas */
+  .topbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 64px 0 48px;
+  }
+
+  .topbar-back {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 34px;
+    font-weight: 600;
+    color: #1B9ED4;
+  }
+
+  .topbar-back svg { width: 22px; height: 22px; }
+
+  .topbar-dots {
+    width: 56px; height: 56px;
+    border-radius: 50%;
+    border: 3px solid #1B9ED4;
+    display: flex; align-items: center; justify-content: center;
+    gap: 5px;
+  }
+  .topbar-dots span {
+    width: 7px; height: 7px;
+    background: #1B9ED4;
+    border-radius: 50%;
+    display: block;
+  }
+
+  /* Título */
+  .titulo {
+    font-size: 68px;
+    font-weight: 900;
+    color: #0D1B2A;
+    line-height: 1.15;
+    margin-bottom: 48px;
+    letter-spacing: -1px;
+  }
+
+  .titulo .destaque {
+    background: #D6EEFA;
+    color: #1565A8;
+    padding: 4px 16px;
+    border-radius: 8px;
+    display: inline;
+    position: relative;
+  }
+
+  /* Bolinha decorativa */
+  .detalhe-linha {
+    display: flex;
+    align-items: center;
+    gap: 0;
+    margin-bottom: 56px;
+  }
+
+  .bolinha {
+    width: 20px; height: 20px;
+    background: #1B9ED4;
+    border-radius: 50%;
+    flex-shrink: 0;
+  }
+
+  .linha-h {
+    flex: 1;
+    height: 3px;
+    background: linear-gradient(90deg, #1B9ED4, #D6EEFA);
+    border-radius: 2px;
+  }
+
+  .bolinha-right {
+    width: 20px; height: 20px;
+    background: #D6EEFA;
+    border-radius: 50%;
+    flex-shrink: 0;
+  }
+
+  /* Perguntas */
+  .perguntas {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    flex: 1;
+  }
+
+  .pergunta {
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+    font-size: 33px;
+    font-weight: 400;
+    color: #0D1B2A;
+    line-height: 1.4;
+  }
+
+  .pergunta .num {
+    font-size: 36px;
+    font-weight: 800;
+    color: #1B9ED4;
+    min-width: 56px;
+    flex-shrink: 0;
+    line-height: 1.4;
+  }
+
+  .pergunta .avalia {
+    display: block;
+    font-size: 26px;
+    font-weight: 600;
+    color: #1B9ED4;
+    margin-top: 4px;
+  }
+
+  /* Divisor */
+  .divisor {
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(90deg, #1B9ED4, #D6EEFA);
+    margin: 40px 0 36px;
+    border-radius: 2px;
+  }
+
+  /* CTA */
+  .cta {
+    background: linear-gradient(135deg, #1565A8, #1B9ED4);
+    border-radius: 20px;
+    padding: 40px 48px;
+    text-align: center;
+    margin-bottom: 48px;
+  }
+
+  .cta p {
+    font-size: 34px;
+    font-weight: 600;
+    color: #ffffff;
+    line-height: 1.5;
+  }
+
+  .cta strong {
+    font-weight: 800;
+    color: #D6EEFA;
+  }
+
+  /* Logo */
+  .logo-area {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 18px;
+  }
+
+  .logo-texto {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+  }
+
+  .logo-nome {
+    font-size: 30px;
+    font-weight: 800;
+    color: #1B9ED4;
+    letter-spacing: -0.3px;
+  }
+
+  .logo-cargo {
+    font-size: 24px;
+    font-weight: 400;
+    color: #4DC3EF;
+  }
+
+  .logo-icon {
+    width: 72px; height: 72px;
+  }
+</style>
+</head>
+<body>
+
+  <!-- Top bar estilo app de notas -->
+  <div class="topbar">
+    <div class="topbar-back">
+      <svg viewBox="0 0 24 24" fill="none" stroke="#1B9ED4" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+        <polyline points="15 18 9 12 15 6"/>
+      </svg>
+      Notas
+    </div>
+    <div class="topbar-dots">
+      <span></span><span></span><span></span>
+    </div>
+  </div>
+
+  <!-- Título -->
+  <h1 class="titulo">
+    O que o recrutador tá<br>avaliando de verdade<br>em cada
+    <span class="destaque">pergunta<br>da entrevista</span>
+  </h1>
+
+  <!-- Linha decorativa -->
+  <div class="detalhe-linha">
+    <div class="bolinha"></div>
+    <div class="linha-h"></div>
+    <div class="bolinha-right"></div>
+  </div>
+
+  <!-- Perguntas -->
+  <div class="perguntas">
+    <div class="pergunta"><span class="num">1–</span><span>"Fale um pouco sobre você."<span class="avalia">Avalia se você é a pessoa certa pra essa vaga específica</span></span></div>
+    <div class="pergunta"><span class="num">2–</span><span>"Por que saiu do último emprego?"<span class="avalia">Uma palavra negativa sobre o ex-empregador já te elimina</span></span></div>
+    <div class="pergunta"><span class="num">3–</span><span>"Quais são seus pontos fortes?"<span class="avalia">"Sou dedicado" não diferencia ninguém, quer especificidade</span></span></div>
+    <div class="pergunta"><span class="num">4–</span><span>"Quais são seus pontos fracos?"<span class="avalia">Mede autoconhecimento, não a fraqueza em si</span></span></div>
+    <div class="pergunta"><span class="num">5–</span><span>"Como se vê em 5 anos?"<span class="avalia">Quer saber se você vai embora em 1 ano</span></span></div>
+    <div class="pergunta"><span class="num">6–</span><span>"Por que eu deveria te contratar?"<span class="avalia">É o fechamento do argumento, não uma pergunta solta</span></span></div>
+  </div>
+
+  <!-- Divisor -->
+  <div class="divisor"></div>
+
+  <!-- CTA -->
+  <div class="cta">
+    <p>Comente <strong>ENTREVISTA</strong> que eu te mando<br>o modelo exato de como responder<br>cada uma dessas perguntas.</p>
+  </div>
+
+  <!-- Logo -->
+  <div class="logo-area">
+    <div class="logo-texto">
+      <span class="logo-nome">João Pedro Bradley</span>
+      <span class="logo-cargo">Mentor de Carreira</span>
+    </div>
+    <svg class="logo-icon" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+      <circle cx="50" cy="34" r="14" fill="#1B9ED4"/>
+      <ellipse cx="50" cy="72" rx="20" ry="14" fill="#1B9ED4"/>
+      <polygon points="50,8 58,20 42,20" fill="#4DC3EF" opacity="0.85"/>
+      <polygon points="74,18 78,32 66,28" fill="#4DC3EF" opacity="0.75"/>
+      <polygon points="84,44 82,58 72,50" fill="#4DC3EF" opacity="0.65"/>
+      <polygon points="26,18 22,32 34,28" fill="#4DC3EF" opacity="0.75"/>
+      <polygon points="16,44 18,58 28,50" fill="#4DC3EF" opacity="0.65"/>
+      <polygon points="34,82 28,68 42,72" fill="#4DC3EF" opacity="0.75"/>
+      <polygon points="66,82 72,68 58,72" fill="#4DC3EF" opacity="0.75"/>
+      <polygon points="50,94 42,82 58,82" fill="#4DC3EF" opacity="0.85"/>
+    </svg>
+  </div>
+
+</body>
+</html>

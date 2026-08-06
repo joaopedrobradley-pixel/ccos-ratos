@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>curriculoperfeito1</title>
+<meta name="description" content="Responda 12 perguntas rápidas e libere na hora os 4 materiais exclusivos do Currículo Perfeito." />
+<link rel="stylesheet" href="style.css" />
+
+<!--
+  ============================================================
+  META PIXEL — cole o ID antes de publicar
+  ============================================================
+  Snippet oficial do Facebook, com o carregamento do script real
+  adiado (técnica documentada em reference_lovable_netlify_workflow):
+  a fila fbq/queue já existe na hora (zero risco de perder evento),
+  mas o arquivo pesado (~228KB) só baixa na primeira interação real
+  da pessoa, ou depois de 8s como rede de segurança. Isso evita que
+  o Pixel pese no LCP/TBT medido pelo PageSpeed.
+-->
+<script>
+  const PIXEL_ID = "1684344405497995";
+
+  !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+  n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
+  n.push=n;n.loaded=!0;n.version='2.0';n.queue=[]}(window, document,'script');
+
+  function loadPixelScript(){
+    if(!PIXEL_ID || window._pixelLoaded) return;
+    window._pixelLoaded = true;
+    fbq('init', PIXEL_ID);
+    fbq('track', 'PageView');
+    const s = document.createElement('script');
+    s.async = true;
+    s.src = 'https://connect.facebook.net/en_US/fbevents.js';
+    document.head.appendChild(s);
+  }
+
+  ['scroll','mousemove','touchstart','keydown','click'].forEach(evt => {
+    window.addEventListener(evt, loadPixelScript, { once: true, passive: true });
+  });
+  setTimeout(loadPixelScript, 8000);
+</script>
+</head>
+<body>
+<noscript><img height="1" width="1" style="display:none" alt=""
+  src="https://www.facebook.com/tr?id=1684344405497995&ev=PageView&noscript=1" /></noscript>
+
+<div class="stage">
+  <div class="card" id="card">
+    <div class="topbar">
+      <button class="back-btn" id="backBtn" aria-label="Voltar">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M15 18L9 12L15 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </button>
+    </div>
+
+    <div class="brand">
+      <img src="assets/logo.webp" alt="Currículo Perfeito" width="220" height="95" class="brand-logo" />
+    </div>
+
+    <div class="progress-track" aria-hidden="true">
+      <div class="progress-fill" id="progressFill" style="width:0%"></div>
+    </div>
+
+    <form id="quizForm">
+      <!--
+        Etapa 0 (intro) já vem pronta no HTML, sem depender do JS pra
+        aparecer — é o conteúdo que mais importa pro LCP (maior elemento
+        visível no primeiro carregamento). As próximas etapas são
+        renderizadas via JS normalmente, o que não pesa no LCP porque
+        só acontecem depois de uma interação do usuário.
+      -->
+      <div class="step-body intro" id="stepBody">
+        <h1 class="step-title">Antes de tudo: <u>a sua resposta importa de verdade.</u></h1>
+        <p class="step-sub">
+          Cada pergunta vai me ajudar a entender o seu momento profissional e preparar um evento mais personalizado para o que você realmente precisa hoje.<br><br>
+          Quanto mais sincero(a) você for, mais o <strong>Currículo Perfeito</strong> vai falar diretamente com as dificuldades que estão impedindo você de ser visto, chamado e valorizado pelo mercado.<br><br>
+          E, ao finalizar, você libera na hora seus <strong>4 materiais exclusivos</strong>:
+        </p>
+
+        <div class="actions actions--intro">
+          <button type="submit" class="btn btn-primary cta-btn">Começar</button>
+        </div>
+
+        <div class="materials">
+          <div class="material">
+            <img src="assets/material-modelo.webp" alt="" width="170" height="80" loading="eager" />
+            <h3>Modelo de Currículo Perfeito</h3>
+            <p>organize suas experiências de uma forma que destaque resultados e chame a atenção dos recrutadores</p>
+          </div>
+          <div class="material">
+            <img src="assets/material-banco.webp" alt="" width="170" height="113" loading="eager" />
+            <h3>Banco de Currículos Aprovados</h3>
+            <p>veja currículos reais que já foram aprovados e aplique o mesmo padrão no seu, por área</p>
+          </div>
+          <div class="material">
+            <img src="assets/material-vagas.webp" alt="" width="170" height="113" loading="lazy" />
+            <h3>Vagas Ocultas™</h3>
+            <p>descubra onde estão as oportunidades que nunca chegam aos portais de emprego</p>
+          </div>
+          <div class="material">
+            <img src="assets/material-venda.webp" alt="" width="170" height="113" loading="lazy" />
+            <h3>Se Venda Melhor</h3>
+            <p>cole sua experiência e deixe a IA reorganizar tudo na forma que mais chama atenção do recrutador</p>
+          </div>
+        </div>
+
+        <p class="step-sub">Leva menos de <strong>2 minutos</strong>. Vamos começar?</p>
+
+        <div class="actions">
+          <button type="submit" class="btn btn-primary cta-btn">Começar</button>
+        </div>
+      </div>
+    </form>
+  </div>
+  <p class="hint" id="poweredHint">Suas respostas são salvas automaticamente ao longo do formulário.</p>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

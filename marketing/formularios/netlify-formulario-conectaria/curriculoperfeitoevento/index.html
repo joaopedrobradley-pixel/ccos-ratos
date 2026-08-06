@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>curriculoperfeitoevento</title>
+<meta name="description" content="Cadastre-se para ter acesso a uma condição especial da nossa mentoria de carreira, com todo o suporte personalizado que você precisa." />
+<link rel="stylesheet" href="style.css" />
+
+<!--
+  ============================================================
+  META PIXEL — cole o ID antes de publicar
+  ============================================================
+  Mesmo Pixel usado em todos os formulários da Conectaria.
+  Carregamento adiado (técnica documentada em reference_lovable_netlify_workflow):
+  a fila fbq/queue já existe na hora (zero risco de perder evento),
+  mas o arquivo pesado (~228KB) só baixa na primeira interação real
+  da pessoa, ou depois de 8s como rede de segurança.
+-->
+<script>
+  const PIXEL_ID = "1684344405497995";
+
+  !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+  n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
+  n.push=n;n.loaded=!0;n.version='2.0';n.queue=[]}(window, document,'script');
+
+  function loadPixelScript(){
+    if(!PIXEL_ID || window._pixelLoaded) return;
+    window._pixelLoaded = true;
+    fbq('init', PIXEL_ID);
+    fbq('track', 'PageView');
+    const s = document.createElement('script');
+    s.async = true;
+    s.src = 'https://connect.facebook.net/en_US/fbevents.js';
+    document.head.appendChild(s);
+  }
+
+  ['scroll','mousemove','touchstart','keydown','click'].forEach(evt => {
+    window.addEventListener(evt, loadPixelScript, { once: true, passive: true });
+  });
+  setTimeout(loadPixelScript, 8000);
+</script>
+</head>
+<body>
+<noscript><img height="1" width="1" style="display:none" alt=""
+  src="https://www.facebook.com/tr?id=1684344405497995&ev=PageView&noscript=1" /></noscript>
+
+<div class="stage">
+  <div class="card" id="card">
+    <div class="topbar">
+      <button class="back-btn" id="backBtn" aria-label="Voltar">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M15 18L9 12L15 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </button>
+    </div>
+
+    <div class="brand">
+      <img src="assets/logo.webp" alt="Currículo Perfeito" width="220" height="95" class="brand-logo" />
+    </div>
+
+    <div class="progress-track" aria-hidden="true">
+      <div class="progress-fill" id="progressFill" style="width:0%"></div>
+    </div>
+
+    <form id="quizForm">
+      <!--
+        Etapa 0 (intro) já vem pronta no HTML, sem depender do JS pra
+        aparecer — é o conteúdo que mais importa pro LCP. As próximas
+        etapas são renderizadas via JS normalmente.
+      -->
+      <div class="step-body intro" id="stepBody">
+        <h1 class="step-title">Quer todo o nosso <u>suporte personalizado</u> pra sua carreira depois do evento?</h1>
+        <p class="step-sub">
+          Cadastre-se agora e garanta acesso a uma <strong>condição especial</strong> da nossa mentoria de carreira, feita pra quem quer ir além do que foi visto no Currículo Perfeito.<br><br>
+          Leva menos de <strong>1 minuto</strong>.
+        </p>
+
+        <div class="actions actions--intro">
+          <button type="submit" class="btn btn-primary cta-btn">Quero garantir minha condição</button>
+        </div>
+      </div>
+    </form>
+  </div>
+  <p class="hint" id="poweredHint">Suas respostas são salvas automaticamente ao longo do formulário.</p>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

@@ -48,10 +48,11 @@ Profissional, limpo e moderno. Passa confiança e tecnologia. Minimalista com us
 
 ## Logo
 
-- **Arquivo:** *(adicionar em `marca/logo.png` ou `marca/logo.svg`)*
-- **Versão pra fundo escuro:** *(adicionar em `marca/logo-branco.png` se tiver)*
-- **Onde usar:** slide final do carrossel (CTA), header de propostas, slides de apresentação
-- **Tamanho sugerido:** largura entre 120-200px nos HTMLs
+- **Arquivo:** `marca/logo.png` (horizontal, ícone + "João Pedro Bradley / Mentor de carreira", azul)
+- **Ícone isolado:** `marca/logo-icone.png` (só o símbolo, sem texto, útil em espaços pequenos)
+- **Versão pra fundo escuro:** `marca/logo-branco.png`
+- **Onde usar:** slide final do carrossel (CTA), header de propostas, slides de apresentação, rodapé de qualquer post
+- **Tamanho sugerido:** largura entre 280-380px nos HTMLs (versão horizontal)
 
 ---
 
