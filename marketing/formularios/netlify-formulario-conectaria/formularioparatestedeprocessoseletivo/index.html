@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>testeperfil</title>
+<meta name="description" content="Teste de perfil comportamental (Cinco Grandes Fatores) para candidatos do processo seletivo Conectaria." />
+<link rel="stylesheet" href="style.css" />
+
+<!--
+  ============================================================
+  META PIXEL — cole o ID antes de publicar (ou apague o bloco
+  inteiro se não quiser rastrear essa página)
+  ============================================================
+-->
+<script>
+  const PIXEL_ID = "";
+
+  !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+  n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
+  n.push=n;n.loaded=!0;n.version='2.0';n.queue=[]}(window, document,'script');
+
+  function loadPixelScript(){
+    if(!PIXEL_ID || window._pixelLoaded) return;
+    window._pixelLoaded = true;
+    fbq('init', PIXEL_ID);
+    fbq('track', 'PageView');
+    const s = document.createElement('script');
+    s.async = true;
+    s.src = 'https://connect.facebook.net/en_US/fbevents.js';
+    document.head.appendChild(s);
+  }
+
+  ['scroll','mousemove','touchstart','keydown','click'].forEach(evt => {
+    window.addEventListener(evt, loadPixelScript, { once: true, passive: true });
+  });
+  setTimeout(loadPixelScript, 8000);
+</script>
+</head>
+<body>
+
+<div class="stage">
+  <div class="card" id="card">
+    <div class="topbar">
+      <button class="back-btn" id="backBtn" aria-label="Voltar">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M15 18L9 12L15 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </button>
+    </div>
+
+    <div class="brand">
+      <img src="assets/logo.webp" alt="Conectaria" width="220" height="95" class="brand-logo" />
+    </div>
+
+    <div class="progress-track" aria-hidden="true">
+      <div class="progress-fill" id="progressFill" style="width:0%"></div>
+    </div>
+
+    <form id="quizForm">
+      <!-- Etapa 0 (intro) já pronta no HTML, sem depender do JS pra aparecer (LCP). -->
+      <div class="step-body intro" id="stepBody">
+        <h1 class="step-title">Teste de <u>Perfil Comportamental</u></h1>
+        <p class="step-sub">
+          Esse teste faz parte do nosso processo seletivo. São <strong>50 afirmações curtas</strong>, divididas em 5 blocos — pra cada uma, você marca o quanto concorda ou discorda.<br><br>
+          Não existe resposta certa ou errada. Responda com a primeira reação sincera, sem pensar demais em cada uma.<br><br>
+          Leva entre <strong>8 e 12 minutos</strong>.
+        </p>
+
+        <div class="actions actions--intro">
+          <button type="submit" class="btn btn-primary cta-btn">Começar</button>
+        </div>
+      </div>
+    </form>
+  </div>
+  <p class="hint" id="poweredHint">Suas respostas são salvas automaticamente ao longo do teste.</p>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

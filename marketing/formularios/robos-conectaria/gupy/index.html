@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Passar nos robôs da Gupy</title>
+<meta name="description" content="Cole a vaga e o seu documento da Gupy, e a gente adapta sua candidatura pra essa vaga específica.">
+<style>
+  * { box-sizing: border-box; }
+  :root {
+    --bg: #f4f8fb;
+    --card: #ffffff;
+    --text: #172431;
+    --muted: #667788;
+    --accent: #1f7dbf;
+    --accent-dark: #155a8a;
+    --border: #e2ecf3;
+    --green: #1a7a3d;
+    --red: #b3261e;
+  }
+  body {
+    font-family: -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+    background: var(--bg);
+    margin: 0;
+    padding: 48px 20px;
+    display: flex;
+    justify-content: center;
+    color: var(--text);
+  }
+  .card {
+    background: var(--card);
+    max-width: 560px;
+    width: 100%;
+    padding: 36px;
+    border-radius: 16px;
+    border: 1px solid var(--border);
+    box-shadow: 0 2px 14px rgba(28,26,23,0.05);
+  }
+  .logo {
+    display: block;
+    margin: 0 auto 20px;
+    max-width: 170px;
+    height: auto;
+  }
+  a.back {
+    display: inline-block;
+    margin-bottom: 22px;
+    font-size: 13px;
+    color: var(--muted);
+    text-decoration: none;
+  }
+  a.back:hover { color: var(--accent-dark); }
+  .eyebrow {
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin-bottom: 8px;
+  }
+  h1 {
+    font-size: 21px;
+    margin: 0 0 8px;
+    letter-spacing: -0.01em;
+  }
+  p.subtitle {
+    font-size: 14px;
+    color: var(--muted);
+    margin: 0 0 28px;
+    line-height: 1.5;
+  }
+  label {
+    display: block;
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 6px;
+  }
+  textarea, input[type="url"] {
+    width: 100%;
+    padding: 12px 14px;
+    font-size: 15px;
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    font-family: inherit;
+  }
+  textarea {
+    resize: vertical;
+    min-height: 160px;
+    line-height: 1.45;
+  }
+  input:focus, textarea:focus { outline: none; border-color: var(--accent); }
+
+  .field { margin-bottom: 8px; }
+  .field-note {
+    display: flex;
+    gap: 8px;
+    font-size: 12.5px;
+    line-height: 1.5;
+    color: #1f6b3a;
+    background: #eaf7ee;
+    border: 1px solid #bfe3cb;
+    border-radius: 8px;
+    padding: 10px 12px;
+    margin: 8px 0 22px;
+  }
+  .field-note span.ico { flex-shrink: 0; }
+
+  .warning-box {
+    display: flex;
+    gap: 10px;
+    background: #eaf7ee;
+    border: 1px solid #bfe3cb;
+    border-radius: 10px;
+    padding: 12px 14px;
+    margin: 0 0 22px;
+    font-size: 13px;
+    line-height: 1.5;
+    color: #1f6b3a;
+  }
+  .warning-box strong { display: block; margin-bottom: 2px; }
+
+  .danger-box {
+    display: flex;
+    gap: 10px;
+    background: #fdecea;
+    border: 1px solid #f3b4ab;
+    border-radius: 10px;
+    padding: 12px 14px;
+    margin: 0 0 24px;
+    font-size: 13px;
+    line-height: 1.55;
+    color: #8a1c12;
+  }
+  .danger-box strong { display: block; margin-bottom: 2px; }
+
+  button {
+    width: 100%;
+    padding: 14px;
+    font-size: 16px;
+    font-weight: 700;
+    background: var(--accent);
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    margin-top: 4px;
+  }
+  button:hover { background: var(--accent-dark); }
+  button:disabled { opacity: 0.6; cursor: not-allowed; }
+  .msg {
+    margin-top: 16px;
+    font-size: 14px;
+    text-align: center;
+  }
+  .msg.error { color: var(--red); }
+
+  .hidden { display: none; }
+
+  /* Tela de carregamento */
+  .spinner {
+    width: 44px;
+    height: 44px;
+    margin: 8px auto 24px;
+    border-radius: 50%;
+    border: 4px solid var(--border);
+    border-top-color: var(--accent);
+    animation: spin 0.9s linear infinite;
+  }
+  @keyframes spin { to { transform: rotate(360deg); } }
+  @media (prefers-reduced-motion: reduce) { .spinner { animation: none; } }
+
+  .state-view { text-align: center; padding: 12px 0; }
+  .state-view h1 { text-align: center; }
+  .state-view p.subtitle { text-align: center; margin-bottom: 10px; }
+  .state-hint {
+    font-size: 12.5px;
+    color: var(--muted);
+    line-height: 1.5;
+    margin-top: 18px;
+  }
+
+  .success-icon, .error-icon {
+    width: 52px;
+    height: 52px;
+    margin: 4px auto 18px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 26px;
+  }
+  .success-icon { background: #e5f4ea; }
+  .error-icon { background: #fbe9e7; }
+
+  a.doc-link {
+    display: block;
+    width: 100%;
+    padding: 14px;
+    font-size: 16px;
+    font-weight: 700;
+    background: var(--green);
+    color: #fff;
+    border-radius: 10px;
+    text-decoration: none;
+    margin-top: 6px;
+  }
+  a.doc-link:hover { opacity: 0.92; }
+
+  .review-note {
+    text-align: left;
+    font-size: 12.5px;
+    line-height: 1.55;
+    color: var(--muted);
+    background: #f4f8fb;
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 12px 14px;
+    margin-top: 18px;
+  }
+
+  button.secondary {
+    background: transparent;
+    color: var(--accent-dark);
+    border: 1px solid var(--border);
+    margin-top: 10px;
+  }
+  button.secondary:hover { background: #f4f8fb; }
+</style>
+</head>
+<body>
+  <div class="card">
+    <img class="logo" src="../assets/logo-conectaria.png" alt="Conectaria">
+
+    <!-- ETAPA 1: formulário -->
+    <div id="viewForm">
+      <div class="danger-box">
+        <span>🔒</span>
+        <span><strong>Acesso exclusivo dos clientes da mentoria Conectaria.</strong> Não compartilhe esse link com outras pessoas. Conseguimos identificar de onde vem cada uso, e o compartilhamento pra fora da mentoria é considerado uma violação do nosso processo, podendo levar ao cancelamento do seu acesso. Pode acontecer algum bug ocasional durante o uso, e nesse caso é só chamar o nosso time que a gente te ajuda.</span>
+      </div>
+
+      <a class="back" href="../">&larr; Voltar</a>
+      <div class="eyebrow">Robôs da Conectaria</div>
+      <h1>Passar nos robôs da Gupy</h1>
+      <p class="subtitle">Preencha os campos abaixo e clique em enviar. Nossos robôs vão adaptar o seu perfil pra essa vaga específica.</p>
+
+      <div class="warning-box">
+        <span>⚠️</span>
+        <span><strong>Os links abaixo precisam estar públicos.</strong> Use os mesmos links que já estão no seu plano de ação (os documentos que a Conectaria criou pra você já nascem públicos). Se colar um link privado, o processo não roda.</span>
+      </div>
+
+      <form id="form">
+        <div class="field">
+          <label for="vaga_descricao">Descrição da vaga que você está buscando</label>
+          <textarea id="vaga_descricao" name="vaga_descricao" placeholder="Cole aqui todo o texto da vaga: título, responsabilidades, requisitos, benefícios..." required></textarea>
+        </div>
+        <div class="field-note">
+          <span class="ico">💡</span>
+          <span>Copie e cole a vaga inteira, sem resumir. Quanto mais detalhes a vaga tiver, mais precisa fica a análise da sua experiência pra ela. Cole apenas uma vaga por vez, colar mais de uma faz o processo dar errado.</span>
+        </div>
+
+        <div class="field">
+          <label for="link_gupy_atual">Link do seu documento da Gupy atual</label>
+          <input type="url" id="link_gupy_atual" name="link_gupy_atual" placeholder="https://docs.google.com/document/d/..." required>
+        </div>
+        <div class="field-note">
+          <span class="ico">💡</span>
+          <span>Esse link precisa ser do documento mais atualizado, que reflete exatamente o que está preenchido na sua Gupy hoje.</span>
+        </div>
+
+        <div class="field">
+          <label for="link_pasta_drive">Link da sua pasta no Drive</label>
+          <input type="url" id="link_pasta_drive" name="link_pasta_drive" placeholder="https://drive.google.com/drive/folders/..." required>
+        </div>
+        <div class="field-note">
+          <span class="ico">📁</span>
+          <span>É nessa pasta do Drive que o novo documento vai ser gerado e enviado pra você. Depois é só copiar e colar dentro da sua Gupy.</span>
+        </div>
+
+        <button type="submit" id="submitBtn">Enviar pros robôs</button>
+      </form>
+
+      <div id="msg" class="msg"></div>
+    </div>
+
+    <!-- ETAPA 2: carregando -->
+    <div id="viewLoading" class="state-view hidden">
+      <div class="spinner"></div>
+      <h1>Preparando sua candidatura</h1>
+      <p class="subtitle">Isso costuma levar alguns minutos. Deixe essa página aberta que ela atualiza sozinha assim que terminar.</p>
+      <p class="state-hint" id="loadingHint"></p>
+    </div>
+
+    <!-- ETAPA 3: sucesso -->
+    <div id="viewSuccess" class="state-view hidden">
+      <div class="success-icon">✅</div>
+      <h1>Prontinho, seu material está pronto</h1>
+      <p class="subtitle">Clique no botão abaixo pra abrir o seu documento adaptado pra essa vaga.</p>
+      <a class="doc-link" id="docLink" href="#" target="_blank" rel="noopener noreferrer">Abrir meu documento</a>
+      <div class="review-note">Esse processo foi feito de forma automatizada. Vale a pena revisar as informações e ajustar o que fizer sentido pra você antes de enviar pra vaga.</div>
+      <button type="button" class="secondary" id="restartFromSuccess">Enviar outra vaga</button>
+    </div>
+
+    <!-- ETAPA 4: erro -->
+    <div id="viewError" class="state-view hidden">
+      <div class="error-icon">⚠️</div>
+      <h1>Algo não saiu como esperado</h1>
+      <p class="subtitle" id="errorMessage">Verifique se os links que você colou estão públicos e tente novamente. Se o problema continuar, fale com o nosso time.</p>
+      <button type="button" id="restartFromError">Tentar novamente</button>
+    </div>
+  </div>
+
+  <script>
+    // TODO: colar aqui os 2 webhooks do Make antes de publicar.
+    // TRIGGER_WEBHOOK_URL: recebe os 3 campos e dispara o cenário.
+    // STATUS_WEBHOOK_URL: recebe { session_id } e devolve o andamento
+    // (ver explicação da arquitetura na memória do projeto).
+    const TRIGGER_WEBHOOK_URL = "https://hook.us2.make.com/wmx48b2rw752mde5vcofxs712v6lrwfe";
+    const STATUS_WEBHOOK_URL = "https://hook.us2.make.com/dboljhdsqoe4ism8e1pnjla6bkdveqhl";
+
+    const STORAGE_KEY = "robos_conectaria_gupy_pending";
+    const POLL_INTERVAL_MS = 30000;
+    const POLL_TIMEOUT_MS = 6 * 60 * 1000;
+
+    const viewForm = document.getElementById("viewForm");
+    const viewLoading = document.getElementById("viewLoading");
+    const viewSuccess = document.getElementById("viewSuccess");
+    const viewError = document.getElementById("viewError");
+    const loadingHint = document.getElementById("loadingHint");
+    const docLink = document.getElementById("docLink");
+    const errorMessage = document.getElementById("errorMessage");
+
+    const form = document.getElementById("form");
+    const btn = document.getElementById("submitBtn");
+    const msg = document.getElementById("msg");
+
+    let pollTimer = null;
+
+    function showView(view) {
+      [viewForm, viewLoading, viewSuccess, viewError].forEach((v) => v.classList.add("hidden"));
+      view.classList.remove("hidden");
+    }
+
+    function stopPolling() {
+      if (pollTimer) clearTimeout(pollTimer);
+      pollTimer = null;
+    }
+
+    function goToForm() {
+      stopPolling();
+      localStorage.removeItem(STORAGE_KEY);
+      form.reset();
+      msg.textContent = "";
+      msg.className = "msg";
+      showView(viewForm);
+    }
+
+    function goToSuccess(link) {
+      stopPolling();
+      localStorage.removeItem(STORAGE_KEY);
+      docLink.href = link;
+      showView(viewSuccess);
+    }
+
+    function goToError(message) {
+      stopPolling();
+      localStorage.removeItem(STORAGE_KEY);
+      errorMessage.textContent = message || "Verifique se os links que você colou estão públicos e tente novamente. Se o problema continuar, fale com o nosso time.";
+      showView(viewError);
+    }
+
+    async function pollStatus(sessionId, startedAt) {
+      if (Date.now() - startedAt > POLL_TIMEOUT_MS) {
+        loadingHint.textContent = "Isso está demorando mais que o normal. Pode continuar aguardando aqui, o processo continua rodando.";
+      }
+
+      try {
+        const res = await fetch(STATUS_WEBHOOK_URL, {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ session_id: sessionId })
+        });
+        const data = await res.json();
+
+        if (data.status === "concluido" && data.link) {
+          goToSuccess(data.link);
+          return;
+        }
+        if (data.status === "erro") {
+          goToError(data.message);
+          return;
+        }
+      } catch (err) {
+        // Falha de rede na checagem não é erro final, só tenta de novo no próximo ciclo.
+      }
+
+      pollTimer = setTimeout(() => pollStatus(sessionId, startedAt), POLL_INTERVAL_MS);
+    }
+
+    function startPolling(sessionId, startedAt) {
+      showView(viewLoading);
+      loadingHint.textContent = "";
+      pollStatus(sessionId, startedAt);
+    }
+
+    form.addEventListener("submit", async (e) => {
+      e.preventDefault();
+      msg.textContent = "";
+      msg.className = "msg";
+      btn.disabled = true;
+      btn.textContent = "Enviando...";
+
+      const sessionId = crypto.randomUUID();
+      const payload = {
+        session_id: sessionId,
+        vaga_descricao: document.getElementById("vaga_descricao").value.trim(),
+        link_gupy_atual: document.getElementById("link_gupy_atual").value.trim(),
+        link_pasta_drive: document.getElementById("link_pasta_drive").value.trim(),
+        submitted_at: new Date().toISOString()
+      };
+
+      try {
+        const res = await fetch(TRIGGER_WEBHOOK_URL, {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify(payload)
+        });
+
+        if (!res.ok) throw new Error("Resposta não-OK do webhook: " + res.status);
+
+        const startedAt = Date.now();
+        localStorage.setItem(STORAGE_KEY, JSON.stringify({ session_id: sessionId, started_at: startedAt }));
+        startPolling(sessionId, startedAt);
+      } catch (err) {
+        msg.textContent = "Erro ao enviar. Tente novamente em alguns instantes.";
+        msg.classList.add("error");
+      } finally {
+        btn.disabled = false;
+        btn.textContent = "Enviar pros robôs";
+      }
+    });
+
+    document.getElementById("restartFromSuccess").addEventListener("click", goToForm);
+    document.getElementById("restartFromError").addEventListener("click", goToForm);
+
+    // Se a pessoa recarregar ou voltar pra essa página com um envio em
+    // andamento, retoma a checagem em vez de mostrar o formulário de novo.
+    (function resumePendingSession() {
+      const raw = localStorage.getItem(STORAGE_KEY);
+      if (!raw) return;
+      try {
+        const saved = JSON.parse(raw);
+        if (saved.session_id && saved.started_at) {
+          startPolling(saved.session_id, saved.started_at);
+        }
+      } catch (err) {
+        localStorage.removeItem(STORAGE_KEY);
+      }
+    })();
+  </script>
+</body>
+</html>

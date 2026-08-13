@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Estruturação Completa — Currículo, LinkedIn e Gupy</title>
+<style>
+  * { box-sizing: border-box; }
+  :root {
+    --bg: #f4f8fb;
+    --card: #ffffff;
+    --text: #172431;
+    --muted: #667788;
+    --accent: #1f7dbf;
+    --accent-dark: #155a8a;
+    --border: #e2ecf3;
+  }
+  body {
+    font-family: -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+    background: var(--bg);
+    margin: 0;
+    padding: 48px 20px;
+    display: flex;
+    justify-content: center;
+    color: var(--text);
+  }
+  .card {
+    background: var(--card);
+    max-width: 540px;
+    width: 100%;
+    padding: 36px;
+    border-radius: 16px;
+    border: 1px solid var(--border);
+    box-shadow: 0 2px 14px rgba(28,26,23,0.05);
+  }
+  a.back {
+    display: inline-block;
+    margin-bottom: 22px;
+    font-size: 13px;
+    color: var(--muted);
+    text-decoration: none;
+  }
+  a.back:hover { color: var(--accent-dark); }
+  .eyebrow {
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin-bottom: 8px;
+  }
+  h1 {
+    font-size: 20px;
+    margin: 0 0 8px;
+    letter-spacing: -0.01em;
+  }
+  p.subtitle {
+    font-size: 14px;
+    color: var(--muted);
+    margin: 0 0 28px;
+    line-height: 1.5;
+  }
+  label {
+    display: block;
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 6px;
+  }
+  label .opcional {
+    font-weight: 400;
+    color: var(--muted);
+    font-size: 12px;
+  }
+  input[type="url"] {
+    width: 100%;
+    padding: 12px 14px;
+    font-size: 15px;
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    margin-bottom: 20px;
+    font-family: inherit;
+  }
+  input:focus { outline: none; border-color: var(--accent); }
+
+  fieldset {
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 14px 16px 16px;
+    margin: 0 0 24px;
+  }
+  legend {
+    font-size: 14px;
+    font-weight: 600;
+    padding: 0 6px;
+  }
+  .format-option {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    padding: 8px 4px;
+    border-radius: 8px;
+    cursor: pointer;
+  }
+  .format-option:hover { background: #f9f6f1; }
+  .format-option input { margin-top: 3px; accent-color: var(--accent); }
+  .format-option .ftext { font-size: 13.5px; }
+  .format-option .ftext strong { display: block; font-size: 14px; margin-bottom: 2px; }
+  .format-option .ftext span { color: var(--muted); }
+
+  button {
+    width: 100%;
+    padding: 14px;
+    font-size: 16px;
+    font-weight: 700;
+    background: var(--accent);
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+  }
+  button:hover { background: var(--accent-dark); }
+  button:disabled { opacity: 0.6; cursor: not-allowed; }
+  .msg {
+    margin-top: 16px;
+    font-size: 14px;
+    text-align: center;
+  }
+  .msg.success { color: #1a7a3d; }
+  .msg.error { color: #b3261e; }
+  .switch-flow {
+    text-align: center;
+    margin-top: 24px;
+    font-size: 13px;
+  }
+  .switch-flow a { color: var(--muted); text-decoration: none; }
+  .switch-flow a:hover { color: var(--accent-dark); }
+  .logo {
+    display: block;
+    margin: 0 auto 20px;
+    max-width: 170px;
+    height: auto;
+  }
+  .warning-box {
+    display: flex;
+    gap: 10px;
+    background: #fdf3e7;
+    border: 1px solid #f0d9b5;
+    border-radius: 10px;
+    padding: 12px 14px;
+    margin: 0 0 22px;
+    font-size: 13px;
+    line-height: 1.5;
+    color: #7a5a1e;
+  }
+  .warning-box strong { display: block; margin-bottom: 2px; }
+</style>
+</head>
+<body>
+  <div class="card">
+    <img class="logo" src="../assets/logo-conectaria.png" alt="Conectaria">
+    <a class="back" href="../">&larr; Voltar ao menu</a>
+    <div class="eyebrow">Estruturação Completa</div>
+    <h1>Currículo, LinkedIn e Gupy</h1>
+    <p class="subtitle">Preencha os 3 links do Drive do cliente, escolha o formato e clique em enviar. O cenário do Make dispara automaticamente.</p>
+
+    <div class="warning-box">
+      <span>⚠️</span>
+      <span><strong>Os links abaixo precisam ser do Google Drive</strong> (começam com drive.google.com ou docs.google.com). Não cole link de anexo de outro sistema (ClickUp, WhatsApp, e-mail etc.) — a automação não consegue acessar esses links e o processo trava.</span>
+    </div>
+
+    <form id="form">
+      <label for="link_documento_mestre">Link do Documento Mestre</label>
+      <input type="url" id="link_documento_mestre" name="link_documento_mestre" placeholder="https://docs.google.com/document/d/..." required>
+
+      <label for="link_pasta_cliente">Link da pasta do cliente no Drive</label>
+      <input type="url" id="link_pasta_cliente" name="link_pasta_cliente" placeholder="https://drive.google.com/drive/folders/..." required>
+
+      <label for="link_curriculo_anterior">Link do currículo anterior do cliente
+        <span class="opcional">(PDF ou Word, opcional)</span>
+      </label>
+      <input type="url" id="link_curriculo_anterior" name="link_curriculo_anterior" placeholder="https://drive.google.com/file/d/...">
+
+      <fieldset>
+        <legend>Idioma da estruturação</legend>
+        <label class="format-option">
+          <input type="radio" name="idioma" value="portugues" checked>
+          <span class="ftext"><strong>Português</strong><span>Currículo, LinkedIn e Gupy estruturados em português.</span></span>
+        </label>
+        <label class="format-option">
+          <input type="radio" name="idioma" value="ingles">
+          <span class="ftext"><strong>Inglês</strong><span>Currículo, LinkedIn e Gupy estruturados em inglês.</span></span>
+        </label>
+      </fieldset>
+
+      <fieldset>
+        <legend>Formato da estruturação</legend>
+        <label class="format-option">
+          <input type="radio" name="formato" value="expandida" checked>
+          <span class="ftext"><strong>Expandida</strong><span>Bullets densos e detalhados, com seção de Principais Resultados. Padrão atual.</span></span>
+        </label>
+        <label class="format-option">
+          <input type="radio" name="formato" value="resumida">
+          <span class="ftext"><strong>Resumida</strong><span>Currículo mais direto, uma linha por atividade, sem seção de resultados separada.</span></span>
+        </label>
+      </fieldset>
+
+      <button type="submit" id="submitBtn">Enviar e disparar automação</button>
+    </form>
+
+    <div id="msg" class="msg"></div>
+
+    <p class="switch-flow">
+      <a href="../curriculo/">Quer gerar só um Currículo avulso pra uma vaga específica? Clique aqui →</a>
+    </p>
+  </div>
+
+  <script>
+    const WEBHOOK_URL = "https://hook.us2.make.com/q9b6tabqqys1uv10aq4or6ghuhlcdiu3";
+
+    const form = document.getElementById("form");
+    const btn = document.getElementById("submitBtn");
+    const msg = document.getElementById("msg");
+
+    form.addEventListener("submit", async (e) => {
+      e.preventDefault();
+      msg.textContent = "";
+      msg.className = "msg";
+      btn.disabled = true;
+      btn.textContent = "Enviando...";
+
+      const payload = {
+        link_documento_mestre: document.getElementById("link_documento_mestre").value.trim(),
+        link_pasta_cliente: document.getElementById("link_pasta_cliente").value.trim(),
+        link_curriculo_anterior: document.getElementById("link_curriculo_anterior").value.trim(),
+        idioma: document.querySelector('input[name="idioma"]:checked').value,
+        formato: document.querySelector('input[name="formato"]:checked').value
+      };
+
+      try {
+        const res = await fetch(WEBHOOK_URL, {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify(payload)
+        });
+
+        if (res.ok) {
+          msg.textContent = "Enviado! A automação foi disparada.";
+          msg.classList.add("success");
+          form.reset();
+        } else {
+          throw new Error("Resposta não-OK do webhook: " + res.status);
+        }
+      } catch (err) {
+        msg.textContent = "Erro ao enviar. Tente novamente ou avise o time técnico.";
+        msg.classList.add("error");
+      } finally {
+        btn.disabled = false;
+        btn.textContent = "Enviar e disparar automação";
+      }
+    });
+  </script>
+</body>
+</html>

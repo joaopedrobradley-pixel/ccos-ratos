@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Histórias de sucesso dos nossos mentorados | Conectaria</title>
+    <meta
+      name="description"
+      content="Cases completos de profissionais recolocados no Brasil e no exterior: antes e depois, tempo até o resultado e prints reais das conversas."
+    />
+    <meta property="og:title" content="Histórias de sucesso dos nossos mentorados" />
+    <meta
+      property="og:description"
+      content="Filtre por mercado, área, tempo até o resultado e tamanho da empresa e veja os cases completos dos nossos mentorados."
+    />
+    <meta property="og:type" content="website" />
+    <meta name="twitter:card" content="summary_large_image" />
+
+    <script>
+      // Fila do Pixel pronta na hora (nenhum evento se perde); o script pesado
+      // só baixa na primeira interação real ou depois de 8s, pra não pesar o LCP/TBT.
+      !(function (f, b, e, v, n, t, s) {
+        if (f.fbq) return;
+        n = f.fbq = function () {
+          n.callMethod ? n.callMethod.apply(n, arguments) : n.queue.push(arguments);
+        };
+        if (!f._fbq) f._fbq = n;
+        n.push = n;
+        n.loaded = true;
+        n.version = "2.0";
+        n.queue = [];
+        f._fbqLoad = function () {
+          if (n.loaded_real) return;
+          n.loaded_real = true;
+          t = b.createElement(e);
+          t.async = true;
+          t.src = v;
+          s = b.getElementsByTagName(e)[0];
+          s.parentNode.insertBefore(t, s);
+        };
+      })(window, document, "script", "https://connect.facebook.net/en_US/fbevents.js");
+      fbq("init", "1684344405497995");
+      fbq("track", "PageView");
+
+      var fbqLoaded = false;
+      function loadFbqReal() {
+        if (fbqLoaded) return;
+        fbqLoaded = true;
+        window._fbqLoad();
+      }
+      ["scroll", "mousemove", "touchstart", "keydown", "click"].forEach(function (ev) {
+        window.addEventListener(ev, loadFbqReal, { passive: true, once: true });
+      });
+      setTimeout(loadFbqReal, 8000);
+    </script>
+  </head>
+  <body>
+    <noscript>
+      <img
+        height="1"
+        width="1"
+        style="display: none"
+        src="https://www.facebook.com/tr?id=1684344405497995&ev=PageView&noscript=1"
+        alt=""
+      />
+    </noscript>
+
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>

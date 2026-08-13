@@ -1,0 +1,211 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Formulários Conectaria</title>
+<meta name="robots" content="noindex, nofollow" />
+<style>
+  :root{
+    --bg: #eef1f5;
+    --card: #ffffff;
+    --ink: #14171c;
+    --ink-soft: #565d6b;
+    --line: #e1e5eb;
+    --blue: #1a6cb0;
+    --blue-soft: #d9e8f5;
+    --radius-card: 22px;
+  }
+  *{ box-sizing: border-box; }
+  html{ min-height: 100%; }
+  body{
+    margin: 0;
+    min-height: 100vh;
+    min-height: 100dvh;
+    background: var(--bg);
+    color: var(--ink);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 28px 10px;
+    -webkit-font-smoothing: antialiased;
+  }
+  .stage{ width: 100%; max-width: 460px; }
+  .card{
+    background: var(--card);
+    border: 1px solid var(--line);
+    border-radius: var(--radius-card);
+    padding: 30px 22px;
+    box-shadow: 0 1px 2px rgba(20,23,28,0.04), 0 12px 32px -16px rgba(20,23,28,0.18);
+  }
+  .brand{ display: flex; align-items: center; justify-content: center; margin: 0 0 22px; }
+  .brand-logo{ height: 74px; width: auto; }
+
+  h1{ font-size: 20px; font-weight: 800; letter-spacing: -0.01em; margin: 0 0 8px; text-align: center; }
+  p.sub{ font-size: 14px; line-height: 1.5; color: var(--ink-soft); margin: 0 0 20px; text-align: center; }
+
+  #gate input[type="password"]{
+    width: 100%;
+    border: 1.4px solid var(--line);
+    background: transparent;
+    color: var(--ink);
+    border-radius: 14px;
+    padding: 14px 16px;
+    font-size: 15px;
+    font-family: inherit;
+    margin-bottom: 10px;
+  }
+  #gate input[type="password"]:focus-visible{
+    outline: none;
+    border-color: var(--blue);
+    box-shadow: 0 0 0 3px var(--blue-soft);
+  }
+  #gateError{
+    display: none;
+    color: #c0392b;
+    font-size: 13px;
+    margin: -2px 0 10px;
+  }
+  button{
+    width: 100%;
+    border: none;
+    border-radius: 14px;
+    padding: 15px 18px;
+    font-size: 15.5px;
+    font-weight: 700;
+    font-family: inherit;
+    cursor: pointer;
+    background: var(--blue);
+    color: #fff;
+  }
+  button:active{ opacity: 0.9; }
+
+  #menu{ display: none; }
+  .menu-list{ display: flex; flex-direction: column; gap: 10px; }
+  .menu-item{
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    padding: 14px 16px;
+    border: 1.4px solid var(--line);
+    border-radius: 16px;
+    text-decoration: none;
+    color: var(--ink);
+  }
+  .menu-item:hover{ border-color: var(--blue); background: var(--blue-soft); }
+  .menu-item .name{ font-size: 15px; font-weight: 700; }
+  .menu-item .path{ font-size: 12.5px; color: var(--ink-soft); }
+  .menu-group-label{
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: var(--ink-soft);
+    margin: 18px 0 8px;
+  }
+  .menu-group-label:first-of-type{ margin-top: 4px; }
+</style>
+</head>
+<body>
+
+<div class="stage">
+  <div class="card">
+    <div class="brand">
+      <img src="assets/logo.webp" alt="Conectaria" class="brand-logo" />
+    </div>
+
+    <div id="gate">
+      <h1>Área restrita</h1>
+      <p class="sub">Digite a senha pra ver a lista de formulários.</p>
+      <form id="gateForm">
+        <input type="password" id="gatePassword" placeholder="Senha" autocomplete="off" />
+        <p id="gateError">Senha incorreta. Tenta de novo.</p>
+        <button type="submit">Entrar</button>
+      </form>
+    </div>
+
+    <div id="menu">
+      <h1>Formulários</h1>
+      <p class="sub">Clique pra abrir a subpasta de cada formulário.</p>
+
+      <p class="menu-group-label">Captura de leads</p>
+      <div class="menu-list">
+        <a class="menu-item" href="curriculoperfeito1/">
+          <span class="name">Currículo Perfeito 1 — Pré-evento</span>
+          <span class="path">/curriculoperfeito1/</span>
+        </a>
+        <a class="menu-item" href="curriculoperfeitoevento/">
+          <span class="name">Currículo Perfeito 1 — Pós-evento</span>
+          <span class="path">/curriculoperfeitoevento/</span>
+        </a>
+        <a class="menu-item" href="curriculoperfeito2/">
+          <span class="name">Currículo Perfeito 2 — Pré-evento</span>
+          <span class="path">/curriculoperfeito2/</span>
+        </a>
+        <a class="menu-item" href="curriculoperfeitoevento2/">
+          <span class="name">Currículo Perfeito 2 — Pós-evento</span>
+          <span class="path">/curriculoperfeitoevento2/</span>
+        </a>
+        <a class="menu-item" href="sitesdevaga/">
+          <span class="name">+50 Sites de Vagas Remotas</span>
+          <span class="path">/sitesdevaga/</span>
+        </a>
+        <a class="menu-item" href="temaslive/">
+          <span class="name">Temas da Live</span>
+          <span class="path">/temaslive/</span>
+        </a>
+      </div>
+
+      <p class="menu-group-label">Processo seletivo (interno)</p>
+      <div class="menu-list">
+        <a class="menu-item" href="formularioparatestedeprocessoseletivo/">
+          <span class="name">Formulário de Teste — Processo Seletivo</span>
+          <span class="path">/formularioparatestedeprocessoseletivo/</span>
+        </a>
+        <a class="menu-item" href="testeperfil/">
+          <span class="name">Teste de Perfil Comportamental</span>
+          <span class="path">/testeperfil/</span>
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+  // Trava simples de acesso — não é segurança de verdade (é só HTML/JS
+  // estático, qualquer um pode ver a senha no código-fonte), serve só
+  // pra afastar visita casual de quem cair nessa URL sem querer.
+  const PASSWORD = "1403";
+  const UNLOCK_KEY = "fc_menu_unlocked";
+
+  const gate = document.getElementById("gate");
+  const menu = document.getElementById("menu");
+  const gateForm = document.getElementById("gateForm");
+  const gatePassword = document.getElementById("gatePassword");
+  const gateError = document.getElementById("gateError");
+
+  function unlock(){
+    gate.style.display = "none";
+    menu.style.display = "block";
+  }
+
+  if(localStorage.getItem(UNLOCK_KEY) === "1"){
+    unlock();
+  }
+
+  gateForm.addEventListener("submit", (e) => {
+    e.preventDefault();
+    if(gatePassword.value === PASSWORD){
+      localStorage.setItem(UNLOCK_KEY, "1");
+      unlock();
+    } else {
+      gateError.style.display = "block";
+      gatePassword.value = "";
+      gatePassword.focus();
+    }
+  });
+</script>
+
+</body>
+</html>
